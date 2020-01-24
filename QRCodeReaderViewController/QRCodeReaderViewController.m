@@ -255,17 +255,11 @@
     NSLayoutYAxisAnchor * bottomLayoutAnchor;
     NSLayoutXAxisAnchor * leftLayoutAnchor;
     NSLayoutXAxisAnchor * rightLayoutAnchor;
-    if (@available(iOS 11.0, *)) {
-      topLayoutAnchor = self.view.safeAreaLayoutGuide.topAnchor;
-      bottomLayoutAnchor = self.view.safeAreaLayoutGuide.bottomAnchor;
-      leftLayoutAnchor = self.view.safeAreaLayoutGuide.leftAnchor;
-      rightLayoutAnchor = self.view.safeAreaLayoutGuide.rightAnchor;
-    } else {
-      topLayoutAnchor = self.topLayoutGuide.topAnchor;
-      bottomLayoutAnchor = self.bottomLayoutGuide.bottomAnchor;
-      leftLayoutAnchor = self.view.leftAnchor;
-      rightLayoutAnchor = self.view.rightAnchor;
-    }
+    topLayoutAnchor = self.view.safeAreaLayoutGuide.topAnchor;
+    bottomLayoutAnchor = self.view.safeAreaLayoutGuide.bottomAnchor;
+    leftLayoutAnchor = self.view.safeAreaLayoutGuide.leftAnchor;
+    rightLayoutAnchor = self.view.safeAreaLayoutGuide.rightAnchor;
+    
     
   NSDictionary *views = NSDictionaryOfVariableBindings(_cameraView, _cancelButton);
 
